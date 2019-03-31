@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="KGk-i7-Jjw" customClass="STTableTextViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="156.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="这一刻你的想法" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jtE-n9-aRj">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="134"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="CL2-Hr-aNU"/>
+                        </connections>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还可输入100字" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-dF-fpf">
+                        <rect key="frame" x="0.0" y="134" width="364" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="f5U-uo-fml"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-gT-5dg">
+                        <rect key="frame" x="8" y="155" width="356" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="h4G-N3-ZtT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="jtE-n9-aRj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0r3-2i-B3g"/>
+                    <constraint firstAttribute="trailing" secondItem="XSI-gT-5dg" secondAttribute="trailing" id="C05-KI-avR"/>
+                    <constraint firstAttribute="bottom" secondItem="XSI-gT-5dg" secondAttribute="bottom" id="ENr-l0-ccZ"/>
+                    <constraint firstItem="Pcr-dF-fpf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KKn-FF-Snn"/>
+                    <constraint firstItem="Pcr-dF-fpf" firstAttribute="top" secondItem="jtE-n9-aRj" secondAttribute="bottom" id="QPM-kA-oWX"/>
+                    <constraint firstItem="jtE-n9-aRj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jIX-vy-5tz"/>
+                    <constraint firstAttribute="trailing" secondItem="Pcr-dF-fpf" secondAttribute="trailing" id="pFb-nq-m04"/>
+                    <constraint firstItem="XSI-gT-5dg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="rhL-np-RUY"/>
+                    <constraint firstAttribute="trailing" secondItem="jtE-n9-aRj" secondAttribute="trailing" id="s4Z-Th-j7l"/>
+                    <constraint firstItem="XSI-gT-5dg" firstAttribute="top" secondItem="Pcr-dF-fpf" secondAttribute="bottom" id="veg-gj-GfO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="separatorView" destination="XSI-gT-5dg" id="6vN-2E-OGK"/>
+                <outlet property="showWordsNumLab" destination="Pcr-dF-fpf" id="fVh-fH-Rp6"/>
+                <outlet property="textView" destination="jtE-n9-aRj" id="9JS-35-zpU"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="108.5"/>
+        </tableViewCell>
+    </objects>
+</document>

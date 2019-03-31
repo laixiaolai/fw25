@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTradeCell" rowHeight="103" id="KGk-i7-Jjw" customClass="ChatTradeCell">
+            <rect key="frame" x="0.0" y="0.0" width="610" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="610" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-VS-QLN">
+                        <rect key="frame" x="61" y="7" width="31" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="qD7-cO-aLi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFm-AL-kEd">
+                        <rect key="frame" x="61" y="32" width="541" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-z1-HSE">
+                        <rect key="frame" x="571" y="7" width="31" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8Lr-sB-0Kh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_default_head" translatesAutoresizingMaskIntoConstraints="NO" id="Hlh-OK-4kR">
+                        <rect key="frame" x="8" y="7" width="45" height="45"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="bk3-Ux-Ugc"/>
+                            <constraint firstAttribute="height" constant="45" id="zMt-7j-TqE"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fw_im_moredown" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-nr-hLH">
+                        <rect key="frame" x="581" y="43" width="13" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="LCF-Eg-wyL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZhM-z1-HSE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="1yC-45-mO5"/>
+                    <constraint firstItem="XFm-AL-kEd" firstAttribute="leading" secondItem="s1W-VS-QLN" secondAttribute="leading" id="2S3-c9-t1V"/>
+                    <constraint firstAttribute="trailing" secondItem="KMJ-nr-hLH" secondAttribute="trailing" constant="16" id="LhW-ka-bKE"/>
+                    <constraint firstItem="Hlh-OK-4kR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="P1o-6g-nRB"/>
+                    <constraint firstItem="ZhM-z1-HSE" firstAttribute="centerY" secondItem="s1W-VS-QLN" secondAttribute="centerY" id="Q5d-AE-ek6"/>
+                    <constraint firstAttribute="trailing" secondItem="XFm-AL-kEd" secondAttribute="trailing" constant="8" id="Ruf-1q-cye"/>
+                    <constraint firstItem="XFm-AL-kEd" firstAttribute="top" secondItem="ZhM-z1-HSE" secondAttribute="bottom" constant="4" id="VlI-BM-Zp7"/>
+                    <constraint firstAttribute="trailing" secondItem="ZhM-z1-HSE" secondAttribute="trailing" constant="8" id="Zcf-wP-OOr"/>
+                    <constraint firstItem="s1W-VS-QLN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="cU1-Hz-TBF"/>
+                    <constraint firstItem="KMJ-nr-hLH" firstAttribute="centerY" secondItem="XFm-AL-kEd" secondAttribute="centerY" id="gvr-0b-aI4"/>
+                    <constraint firstItem="s1W-VS-QLN" firstAttribute="leading" secondItem="Hlh-OK-4kR" secondAttribute="trailing" constant="8" id="j2E-WU-ujH"/>
+                    <constraint firstItem="Hlh-OK-4kR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="w0L-QI-4eg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mMsg_LabRight_Constraint" destination="Ruf-1q-cye" id="bBd-B1-r8x"/>
+                <outlet property="mdownImg" destination="KMJ-nr-hLH" id="V1k-q2-GTL"/>
+                <outlet property="mheadimg" destination="Hlh-OK-4kR" id="HD0-kf-xh9"/>
+                <outlet property="mmsg" destination="XFm-AL-kEd" id="uKJ-kX-UXU"/>
+                <outlet property="mname" destination="s1W-VS-QLN" id="jok-fT-OP5"/>
+                <outlet property="mtime" destination="ZhM-z1-HSE" id="arg-Mr-1ul"/>
+            </connections>
+            <point key="canvasLocation" x="347" y="492.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fw_im_moredown" width="12" height="6"/>
+        <image name="ic_default_head" width="60" height="60"/>
+    </resources>
+</document>

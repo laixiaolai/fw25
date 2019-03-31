@@ -1,0 +1,280 @@
+//
+//  ChatEmojiView.m
+//  FanweApp
+//
+//  Created by 朱庆彬 on 2017/8/15.
+//  Copyright © 2017年 xfg. All rights reserved.
+//
+
+#import "ChatEmojiView.h"
+#import "CommentEmoji.h"
+#import "EmojiButton.h"
+#import "EmojiObj.h"
+#import "EmojiScrollView.h"
+#import "IconButton.h"
+#import "SMPageControl.h"
+
+@interface ChatEmojiView () <UIScrollViewDelegate>
+{
+    EmojiScrollView *scroll;
+    IconButton *selectIcon;
+}
+
+@property (nonatomic, strong) SMPageControl *pageControl;
+@property (nonatomic, copy) NSArray *iconS;
+@end
+
+@implementation ChatEmojiView
+
+- (instancetype)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    CGRect _frame_ = CGRectMake(0, 0, kScreenW, ChatEmojiView_Hight);
+    _frame_.origin = frame.origin;
+    if (self = [super initWithFrame:_frame_])
+    {
+        [self initUI];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self addEmjioWith:[CommentEmoji class]];
+        });
+    }
+    return self;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    if ((frame.size.height == ChatEmojiView_Hight) && (frame.size.width == kScreenW))
+    {
+        [super setFrame:frame];
+    }
+}
+
+#pragma mark - 初始化界面
+- (void)initUI
+{
+
+    CGRect frame = self.bounds;
+    frame.size.height -= ChatEmojiView_Bottom_H;
+    [self addScroll:frame]; /*scroll*/
+
+    frame.origin.y = CGRectGetHeight(frame) - 2 * EmojiView_Border + 10;
+    frame.size.height = EmojiView_Border;
+    [self addPageControl:frame]; /*pagecontrol*/
+
+    frame.origin.y = ChatEmojiView_Hight - ChatEmojiView_Bottom_H;
+    frame.size.height = ChatEmojiView_Bottom_H;
+    [self addBottom:frame]; /*bottom*/
+
+    [self common:_iconS[0]];
+}
+
+- (void)addScroll:(CGRect)frame
+{
+    scroll = [[EmojiScrollView alloc] initWithFrame:frame];
+    scroll.delegate = self;
+    [self addSubview:scroll];
+}
+
+- (void)addPageControl:(CGRect)frame
+{
+    self.pageControl = [[SMPageControl alloc] initWithFrame:frame];
+    [self.pageControl setCurrentPageIndicatorImage:[UIImage imageNamed:[NSString stringWithFormat:@"face.bundle/%@", @"compose_keyboard_dot_selected"]]];
+    [self.pageControl setPageIndicatorImage:[UIImage imageNamed:[NSString stringWithFormat:@"face.bundle/%@", @"compose_keyboard_dot_normal"]]];
+    self.pageControl.userInteractionEnabled = YES;
+
+    [self addSubview:self.pageControl];
+}
+
+- (void)addBottom:(CGRect)frame
+{
+    UIView *bottom = [[UIView alloc] initWithFrame:frame];
+    //common
+    IconButton *common = [[IconButton alloc] initWithFrame:CGRectMake(0, 0, ChatEmojiView_Bottom_W, ChatEmojiView_Bottom_H)];
+    [common setImage:[UIImage imageNamed:[NSString stringWithFormat:@"face.bundle/%@", @"ic_emoji_blue"]] forState:UIControlStateNormal];
+    [common addTarget:self action:@selector(common:) forControlEvents:UIControlEventTouchUpInside];
+    [bottom addSubview:common];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, bottom.bounds.size.width, 0.5)];
+    line.backgroundColor = [UIColor lightGrayColor];
+    [bottom addSubview:line];
+    self.iconS = @[common];
+    [self addSubview:bottom];
+    //send
+    UIButton *sendB = [[UIButton alloc] init];
+    [sendB setTitle:@"发送" forState:UIControlStateNormal];
+    [sendB addTarget:self action:@selector(sendButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    frame = common.frame;
+    frame.origin = CGPointMake(self.bounds.size.width - frame.size.width, 0);
+    sendB.frame = frame;
+    [sendB setBackgroundColor:kAppMainColor];
+
+    [bottom addSubview:sendB];
+}
+
+- (void)addEmojisWithType:(ChatEmojiViewIconType)type
+{
+    switch (type)
+    {
+        case ChatEmojiViewIconTypeCommon:
+            [self common:_iconS[type]];
+            break;
+        case ChatEmojiViewIconTypeOther:
+            //            [self panda:_iconS[type]];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)common:(IconButton *)sender
+{
+    [self sender:sender];
+    [self addEmjioWith:[CommentEmoji class]];
+}
+
+- (void)sender:(IconButton *)sender
+{
+    if (sender)
+    {
+        if (selectIcon)
+            selectIcon.backgroundColor = [UIColor clearColor];
+        selectIcon = sender;
+        selectIcon.backgroundColor = kAppGrayColor4;
+    }
+}
+
+- (void)addEmjioWith:(Class) class
+{
+    [self scrollInit];
+    NSInteger count_lins = [class countInOneLine];
+    NSInteger page_support = [class pageCountIsSupport];
+    CGFloat space = (kScreenW - EmojiView_Border * 2.0f - count_lins * EmojiIMG_Width_Hight) / (count_lins - 1);
+    scroll.contentSize = CGSizeMake(page_support * kScreenW, 0);
+    self.pageControl.numberOfPages = page_support;
+    for (int i = 0; i < page_support; i++)
+    {
+        NSArray *array = [class emojiObjsWithPage:i];
+        for (int j = 0; j < array.count - 1; j++)
+        {
+            NSInteger lins_w = j / count_lins;
+            NSInteger list_w = j % count_lins;
+            CGRect frame = CGRectMake(EmojiView_Border + list_w * (space + EmojiIMG_Width_Hight) + (i * kScreenW), EmojiView_Border + lins_w * (EmojiIMG_Space_UP + EmojiIMG_Width_Hight), EmojiIMG_Width_Hight, EmojiIMG_Width_Hight);
+            EmojiButton *button = [[EmojiButton alloc] initWithFrame:frame];
+            button.emojiIcon = array[j];
+
+            [button addTarget:self action:@selector(selectorThisIcon:) forControlEvents:UIControlEventTouchUpInside];
+            [scroll addSubview:button];
+            //            UILongPressGestureRecognizer * loTap = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(loTaoAction:)];
+            //            [button addGestureRecognizer:loTap];
+        }
+        EmojiButton *del_B = [[EmojiButton alloc] initWithFrame:CGRectMake(EmojiView_Border + (count_lins - 1) * (space + EmojiIMG_Width_Hight) + (i * kScreenW), EmojiView_Border + (EmojiIMG_Lines - 1) * (EmojiIMG_Space_UP + EmojiIMG_Width_Hight), EmojiIMG_Width_Hight, EmojiIMG_Width_Hight)];
+        del_B.emojiIcon = [array lastObject];
+        [del_B addTarget:self action:@selector(deleteIcons) forControlEvents:UIControlEventTouchUpInside];
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(deleteAllIcons:)];
+        longPress.minimumPressDuration = 0.8; //定义按的时间
+        [del_B addGestureRecognizer:longPress];
+        [scroll addSubview:del_B];
+    }
+}
+
+#pragma mark - other logic action
+    /*切换表情列表*/
+    - (void) scrollInit
+{
+    for (UIView *v in scroll.subviews)
+    {
+        if ([v isKindOfClass:[EmojiButton class]])
+        {
+            [v removeFromSuperview];
+        }
+    }
+    [scroll setContentOffset:CGPointZero];
+}
+
+- (void)loTaoAction:(UILongPressGestureRecognizer *)loTap
+{
+}
+
+- (void)showEmotionName:(NSString *)name
+{
+#define W 80.0f
+#define H 40.0f
+    CGFloat x = (self.superview.frame.size.width - 80.0f) / 2.0f;
+    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(x, self.superview.frame.origin.y, W, H)];
+
+    lab.text = name;
+    lab.alpha = 0.1f;
+    lab.layer.masksToBounds = YES;
+    lab.layer.cornerRadius = 10.0f;
+    lab.textColor = [UIColor whiteColor];
+    lab.backgroundColor = [UIColor grayColor];
+    lab.textAlignment = NSTextAlignmentCenter;
+    lab.font = [UIFont systemFontOfSize:15.0f];
+
+    [self.superview.superview addSubview:lab];
+    [UIView animateWithDuration:0.4f
+        animations:^{
+            lab.frame = CGRectMake(x, -H, W, H);
+            lab.alpha = 1.0f;
+        }
+        completion:^(BOOL finished) {
+            if (finished)
+            {
+                [UIView animateWithDuration:0.3f
+                    delay:0.5f
+                    options:UIViewAnimationOptionCurveEaseOut
+                    animations:^{
+                        lab.alpha = 0.0f;
+                    }
+                    completion:^(BOOL finished) {
+                        if (finished)
+                            [lab removeFromSuperview];
+                    }];
+            }
+        }];
+}
+
+#pragma mark - self delegate action
+- (void)selectorThisIcon:(EmojiButton *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(chatEmojiViewSelectEmojiIcon:)])
+    {
+        [self.delegate chatEmojiViewSelectEmojiIcon:sender.emojiIcon];
+    }
+}
+
+- (void)deleteIcons
+{
+    if ([self.delegate respondsToSelector:@selector(chatEmojiViewTouchUpinsideDeleteButton)])
+    {
+        [self.delegate chatEmojiViewTouchUpinsideDeleteButton];
+    }
+}
+
+-(void)deleteAllIcons:(UILongPressGestureRecognizer *)gestureRecognizer{
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        if ([self.delegate respondsToSelector:@selector(chatEmojiViewTouchDownDeleteButton)])
+        {
+            [self.delegate chatEmojiViewTouchDownDeleteButton];
+        }
+    }
+}
+
+- (void)sendButtonAction
+{
+    if ([self.delegate respondsToSelector:@selector(chatEmojiViewTouchUpinsideSendButton)])
+    {
+        [self.delegate chatEmojiViewTouchUpinsideSendButton];
+    }
+}
+
+#pragma mark - Scroll View Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.pageControl.currentPage = (scrollView.contentOffset.x / scrollView.bounds.size.width) + 0.5;
+}
+
+@end

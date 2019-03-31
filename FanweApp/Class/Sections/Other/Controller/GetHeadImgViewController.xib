@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetHeadImgViewController">
+            <connections>
+                <outlet property="deleButton" destination="ryC-oE-wBw" id="3Zo-jy-d42"/>
+                <outlet property="phoneChoseButton" destination="cCp-6j-VFS" id="B9h-ae-Y1P"/>
+                <outlet property="photoButton" destination="Ftn-G7-lOB" id="MgK-UH-YuD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryC-oE-wBw">
+                    <rect key="frame" x="20" y="431" width="281" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="RHq-AO-elb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="X"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="z2Y-uT-iyS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftn-G7-lOB">
+                    <rect key="frame" x="20" y="330" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ky9-yJ-2nj"/>
+                    </constraints>
+                    <state key="normal" title="拍照">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="hGo-D5-idG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCp-6j-VFS">
+                    <rect key="frame" x="20" y="383" width="281" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="30Y-13-ebF"/>
+                    </constraints>
+                    <state key="normal" title="从手机相册选择">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="RRq-aQ-xrW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ryC-oE-wBw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="0t1-GU-L1v"/>
+                <constraint firstItem="cCp-6j-VFS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="HnT-S1-ubY"/>
+                <constraint firstAttribute="bottom" secondItem="ryC-oE-wBw" secondAttribute="bottom" constant="9" id="OTq-hf-ece"/>
+                <constraint firstItem="ryC-oE-wBw" firstAttribute="top" secondItem="cCp-6j-VFS" secondAttribute="bottom" constant="8" id="PrN-8S-1LM"/>
+                <constraint firstAttribute="trailing" secondItem="Ftn-G7-lOB" secondAttribute="trailing" constant="20" id="Q7q-82-8gT"/>
+                <constraint firstAttribute="trailing" secondItem="cCp-6j-VFS" secondAttribute="trailing" constant="19" id="awG-jZ-bCz"/>
+                <constraint firstItem="cCp-6j-VFS" firstAttribute="top" secondItem="Ftn-G7-lOB" secondAttribute="bottom" constant="13" id="bZ4-xE-Ddu"/>
+                <constraint firstItem="Ftn-G7-lOB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="k5R-nG-8gF"/>
+                <constraint firstAttribute="trailing" secondItem="ryC-oE-wBw" secondAttribute="trailing" constant="19" id="zYn-FA-Udp"/>
+            </constraints>
+            <point key="canvasLocation" x="551" y="363"/>
+        </view>
+    </objects>
+</document>

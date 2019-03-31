@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UpgradeView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vB3-PE-k10">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-el-HC4">
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSY-nt-HLP">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="6mm-0g-oej"/>
+                                        <constraint firstAttribute="height" constant="21" id="8Cc-zz-oPW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbW-7W-L9C">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="Ff4-6L-M2h"/>
+                                        <constraint firstAttribute="width" constant="202" id="nzT-Rg-NXA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fw_home_upgrade" translatesAutoresizingMaskIntoConstraints="NO" id="PQm-lV-pZW">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="170" id="Nyr-x9-a0Q"/>
+                                        <constraint firstAttribute="height" constant="130" id="RnG-pC-KOG"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jw-7B-adH">
+                                    <color key="backgroundColor" red="0.46106336069999998" green="1" blue="0.65134759679999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="tmk-Yx-mae"/>
+                                        <constraint firstAttribute="width" constant="250" id="zC1-cY-qrw"/>
+                                    </constraints>
+                                    <state key="normal" title="知道了"/>
+                                    <connections>
+                                        <action selector="buttonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vFM-Lh-qwa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="PQm-lV-pZW" firstAttribute="centerX" secondItem="VqU-el-HC4" secondAttribute="centerX" id="0u9-hJ-AKR"/>
+                                <constraint firstItem="KSY-nt-HLP" firstAttribute="top" secondItem="PQm-lV-pZW" secondAttribute="bottom" constant="18" id="75j-GH-mOw"/>
+                                <constraint firstItem="tbW-7W-L9C" firstAttribute="centerX" secondItem="VqU-el-HC4" secondAttribute="centerX" id="JD0-I7-nl5"/>
+                                <constraint firstItem="9Jw-7B-adH" firstAttribute="centerX" secondItem="tbW-7W-L9C" secondAttribute="centerX" id="NXW-Xb-YwG"/>
+                                <constraint firstAttribute="bottom" secondItem="9Jw-7B-adH" secondAttribute="bottom" constant="15" id="Ogo-Oe-AkY"/>
+                                <constraint firstItem="KSY-nt-HLP" firstAttribute="centerX" secondItem="VqU-el-HC4" secondAttribute="centerX" id="Oh9-n3-SCh"/>
+                                <constraint firstItem="tbW-7W-L9C" firstAttribute="top" secondItem="KSY-nt-HLP" secondAttribute="bottom" constant="18" id="ah5-fB-uuL"/>
+                                <constraint firstItem="PQm-lV-pZW" firstAttribute="top" secondItem="VqU-el-HC4" secondAttribute="top" constant="-77" id="t0Z-mE-VFn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.48385801369999998" blue="0.55036199460000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="VqU-el-HC4" firstAttribute="leading" secondItem="vB3-PE-k10" secondAttribute="leading" id="8kS-Ba-tJ0"/>
+                        <constraint firstAttribute="bottom" secondItem="VqU-el-HC4" secondAttribute="bottom" id="9Dh-C7-e8a"/>
+                        <constraint firstAttribute="height" constant="302" id="KWU-b3-olv"/>
+                        <constraint firstItem="VqU-el-HC4" firstAttribute="top" secondItem="vB3-PE-k10" secondAttribute="top" constant="77" id="MK8-OS-SO2"/>
+                        <constraint firstAttribute="width" constant="300" id="gD0-Fp-9S4"/>
+                        <constraint firstAttribute="trailing" secondItem="VqU-el-HC4" secondAttribute="trailing" id="meg-Vs-2Yk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vB3-PE-k10" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LpP-pw-AOJ"/>
+                <constraint firstItem="vB3-PE-k10" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hez-NC-QlZ"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="vB3-PE-k10" id="GqW-Zi-gKP"/>
+                <outlet property="comfirmBtn" destination="9Jw-7B-adH" id="cbN-af-tod"/>
+                <outlet property="displayView" destination="VqU-el-HC4" id="to5-aK-btW"/>
+                <outlet property="exLabel" destination="tbW-7W-L9C" id="dxB-OC-hcd"/>
+                <outlet property="upgradeLabel" destination="KSY-nt-HLP" id="VEC-iS-ACB"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fw_home_upgrade" width="170" height="130"/>
+    </resources>
+</document>

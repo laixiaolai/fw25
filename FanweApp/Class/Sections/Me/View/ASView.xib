@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ASView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_shield_normal" translatesAutoresizingMaskIntoConstraints="NO" id="tWa-gh-DzG">
+                    <rect key="frame" x="274" y="28" width="52" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="6h6-tv-ct9"/>
+                        <constraint firstAttribute="width" constant="52" id="RRt-KN-BTM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安全等级: 低" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K97-DX-rZK">
+                    <rect key="frame" x="250" y="109" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="4ag-St-0OP"/>
+                        <constraint firstAttribute="height" constant="20" id="Hw4-7C-NOS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_as_head" translatesAutoresizingMaskIntoConstraints="NO" id="InL-6N-L97">
+                    <rect key="frame" x="8" y="149" width="584" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="NcF-wR-ddY"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通过以下设置可提高安全等级" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izi-gs-eg3">
+                    <rect key="frame" x="175" y="179" width="250" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="9rT-qm-Uci"/>
+                        <constraint firstAttribute="width" constant="250" id="fGw-3Y-miu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="InL-6N-L97" firstAttribute="top" secondItem="K97-DX-rZK" secondAttribute="bottom" constant="20" id="700-Mv-9UZ"/>
+                <constraint firstItem="InL-6N-L97" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9p6-bo-kYl"/>
+                <constraint firstAttribute="trailingMargin" secondItem="InL-6N-L97" secondAttribute="trailing" id="Apa-9n-Ttb"/>
+                <constraint firstItem="tWa-gh-DzG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="20" id="G9e-pK-czX"/>
+                <constraint firstItem="K97-DX-rZK" firstAttribute="top" secondItem="tWa-gh-DzG" secondAttribute="bottom" constant="25" id="TgD-Bd-yIM"/>
+                <constraint firstItem="tWa-gh-DzG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="20" id="VlJ-ny-S2e"/>
+                <constraint firstItem="tWa-gh-DzG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gOl-JX-aGZ"/>
+                <constraint firstItem="InL-6N-L97" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="lqP-E7-ygH"/>
+                <constraint firstItem="K97-DX-rZK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="piN-tc-gph"/>
+                <constraint firstItem="izi-gs-eg3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vHj-Lu-NYy"/>
+                <constraint firstItem="izi-gs-eg3" firstAttribute="top" secondItem="InL-6N-L97" secondAttribute="bottom" constant="20" id="w7T-w6-zTv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="SecutyLable" destination="K97-DX-rZK" id="IqT-QN-T3D"/>
+                <outlet property="ShieldImageView" destination="tWa-gh-DzG" id="Lei-rV-9bT"/>
+            </connections>
+            <point key="canvasLocation" x="367" y="22.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="me_as_head" width="331" height="9"/>
+        <image name="me_shield_normal" width="52" height="56"/>
+    </resources>
+</document>

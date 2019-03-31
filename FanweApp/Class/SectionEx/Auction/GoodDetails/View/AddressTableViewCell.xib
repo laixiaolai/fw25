@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="AddressTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马云    13950000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnK-OU-0ig">
+                        <rect key="frame" x="10" y="8" width="280" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="wW1-VF-Efy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="福建省  厦门市  思明区  软件园二期望海路8号808室" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1x-Vb-wM4">
+                        <rect key="frame" x="10" y="35" width="260" height="44.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="95i-7Y-S3U">
+                        <rect key="frame" x="295" y="35" width="14" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="O6T-bN-yRX"/>
+                            <constraint firstAttribute="width" constant="14" id="Xb6-LA-iqE"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="14s-hV-0Wo">
+                        <rect key="frame" x="10" y="15" width="299" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="ByK-9T-trE"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="14s-hV-0Wo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AWi-a5-6bb"/>
+                    <constraint firstItem="95i-7Y-S3U" firstAttribute="leading" secondItem="p1x-Vb-wM4" secondAttribute="trailing" constant="25" id="ISg-hA-lmy"/>
+                    <constraint firstAttribute="trailing" secondItem="95i-7Y-S3U" secondAttribute="trailing" constant="10" id="MGK-3N-lu7"/>
+                    <constraint firstItem="RnK-OU-0ig" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="P6h-zM-y2i"/>
+                    <constraint firstItem="p1x-Vb-wM4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Tys-Ct-ABJ"/>
+                    <constraint firstItem="p1x-Vb-wM4" firstAttribute="top" secondItem="RnK-OU-0ig" secondAttribute="bottom" constant="6" id="YZD-nR-bop"/>
+                    <constraint firstAttribute="bottom" secondItem="p1x-Vb-wM4" secondAttribute="bottom" constant="10" id="eJN-78-2E5"/>
+                    <constraint firstItem="RnK-OU-0ig" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="h4P-Os-SiN"/>
+                    <constraint firstAttribute="trailing" secondItem="14s-hV-0Wo" secondAttribute="trailing" constant="10" id="jxH-va-U5v"/>
+                    <constraint firstItem="14s-hV-0Wo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="pwG-Rh-st0"/>
+                    <constraint firstItem="95i-7Y-S3U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="stR-aV-yXO"/>
+                    <constraint firstAttribute="trailing" secondItem="RnK-OU-0ig" secondAttribute="trailing" constant="29" id="whJ-NK-G4T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addAddressImgView" destination="14s-hV-0Wo" id="ORM-Ir-K51"/>
+                <outlet property="addressLabel" destination="p1x-Vb-wM4" id="dKL-Mo-gJ3"/>
+                <outlet property="namePhoneLabel" destination="RnK-OU-0ig" id="14i-US-BL8"/>
+                <outlet property="rightImgView" destination="95i-7Y-S3U" id="kAD-CC-r9E"/>
+            </connections>
+            <point key="canvasLocation" x="289.5" y="319"/>
+        </tableViewCell>
+    </objects>
+</document>

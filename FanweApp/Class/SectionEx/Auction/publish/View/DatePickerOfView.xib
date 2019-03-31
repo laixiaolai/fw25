@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerOfView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3s-0V-acu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ldu-cx-EBo"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择约会时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-Cp-T8m">
+                    <rect key="frame" x="80" y="0.0" width="215" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Eut-eI-JWZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw8-CR-btX">
+                    <rect key="frame" x="10" y="0.0" width="60" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7dF-ps-0Nk"/>
+                        <constraint firstAttribute="width" constant="60" id="zeu-7G-4Lc"/>
+                    </constraints>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOv-QH-4xv">
+                    <rect key="frame" x="305" y="0.0" width="60" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="PeJ-6b-f0A"/>
+                        <constraint firstAttribute="width" constant="60" id="X7h-qR-RNV"/>
+                    </constraints>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1qf-Cp-T8m" firstAttribute="leading" secondItem="cw8-CR-btX" secondAttribute="trailing" constant="10" id="BRw-yM-Ihh"/>
+                <constraint firstAttribute="trailing" secondItem="FOv-QH-4xv" secondAttribute="trailing" constant="10" id="FaB-VG-pqp"/>
+                <constraint firstItem="cw8-CR-btX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tr3-ez-2IP"/>
+                <constraint firstItem="cw8-CR-btX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="btY-Xm-MyX"/>
+                <constraint firstItem="1qf-Cp-T8m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d2t-fb-sN3"/>
+                <constraint firstItem="FOv-QH-4xv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f8B-Sh-lhg"/>
+                <constraint firstItem="N3s-0V-acu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gab-0d-ogh"/>
+                <constraint firstItem="N3s-0V-acu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t95-0L-yue"/>
+                <constraint firstAttribute="trailing" secondItem="N3s-0V-acu" secondAttribute="trailing" id="whG-VN-cUp"/>
+                <constraint firstItem="FOv-QH-4xv" firstAttribute="leading" secondItem="1qf-Cp-T8m" secondAttribute="trailing" constant="10" id="xh5-IL-M65"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="CBtn" destination="cw8-CR-btX" id="yoQ-Cm-Fab"/>
+                <outlet property="Qbtn" destination="FOv-QH-4xv" id="u8v-NR-k8b"/>
+                <outlet property="timeLable" destination="1qf-Cp-T8m" id="tOa-X8-u9g"/>
+            </connections>
+            <point key="canvasLocation" x="597.5" y="34"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BullPoker">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_niuniu" translatesAutoresizingMaskIntoConstraints="NO" id="vV5-X0-Hbj" userLabel="BullPokerOne">
+                    <rect key="frame" x="2" y="2" width="160.5" height="663"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_niuniu" translatesAutoresizingMaskIntoConstraints="NO" id="7vk-wj-Ua9" userLabel="BullPokerTwo">
+                    <rect key="frame" x="20" y="2" width="160.5" height="663"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_niuniu" translatesAutoresizingMaskIntoConstraints="NO" id="iTY-XR-W4a" userLabel="BullPokerThree">
+                    <rect key="frame" x="40" y="2" width="160.5" height="663"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_niuniu" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-3g-IW9" userLabel="BullPokerFour">
+                    <rect key="frame" x="60" y="2" width="160.5" height="663"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_niuniu" translatesAutoresizingMaskIntoConstraints="NO" id="JG9-4R-6li" userLabel="BullPokerFive">
+                    <rect key="frame" x="80" y="2" width="160.5" height="663"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-gY-y2Q">
+                    <rect key="frame" x="20" y="643" width="335" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="23S-z0-V44"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HXc-3g-IW9" firstAttribute="height" secondItem="vV5-X0-Hbj" secondAttribute="height" id="1s5-Z0-F5P"/>
+                <constraint firstItem="7vk-wj-Ua9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="1vM-9K-c0L"/>
+                <constraint firstItem="7vk-wj-Ua9" firstAttribute="top" secondItem="vV5-X0-Hbj" secondAttribute="top" id="2Ft-PF-77s"/>
+                <constraint firstItem="JG9-4R-6li" firstAttribute="top" secondItem="vV5-X0-Hbj" secondAttribute="top" id="DmD-j6-W60"/>
+                <constraint firstItem="HXc-3g-IW9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="NmB-C6-njp"/>
+                <constraint firstItem="JG9-4R-6li" firstAttribute="width" secondItem="vV5-X0-Hbj" secondAttribute="width" id="Orh-C7-bu4"/>
+                <constraint firstItem="JG9-4R-6li" firstAttribute="height" secondItem="vV5-X0-Hbj" secondAttribute="height" id="QF7-WU-VLO"/>
+                <constraint firstItem="vV5-X0-Hbj" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3:7" id="Rnq-Od-wmE"/>
+                <constraint firstItem="JG9-4R-6li" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="SUN-5M-Thd"/>
+                <constraint firstItem="iTY-XR-W4a" firstAttribute="top" secondItem="vV5-X0-Hbj" secondAttribute="top" id="Tpp-Uj-ki5"/>
+                <constraint firstItem="Ki0-gY-y2Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Ua6-HH-orn"/>
+                <constraint firstItem="HXc-3g-IW9" firstAttribute="width" secondItem="vV5-X0-Hbj" secondAttribute="width" id="UzK-hH-eQy"/>
+                <constraint firstItem="7vk-wj-Ua9" firstAttribute="width" secondItem="vV5-X0-Hbj" secondAttribute="width" id="Wey-sx-VX8"/>
+                <constraint firstItem="7vk-wj-Ua9" firstAttribute="height" secondItem="vV5-X0-Hbj" secondAttribute="height" id="X6f-Gt-O8b"/>
+                <constraint firstAttribute="bottom" secondItem="vV5-X0-Hbj" secondAttribute="bottom" constant="2" id="Y7b-M5-yEJ"/>
+                <constraint firstItem="vV5-X0-Hbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="c8q-uV-GvS"/>
+                <constraint firstItem="iTY-XR-W4a" firstAttribute="width" secondItem="vV5-X0-Hbj" secondAttribute="width" id="fbn-FI-dT1"/>
+                <constraint firstItem="HXc-3g-IW9" firstAttribute="top" secondItem="vV5-X0-Hbj" secondAttribute="top" id="nbe-gd-Uq0"/>
+                <constraint firstAttribute="bottom" secondItem="Ki0-gY-y2Q" secondAttribute="bottom" id="nuj-06-JzK"/>
+                <constraint firstItem="iTY-XR-W4a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="sMj-vR-gLv"/>
+                <constraint firstAttribute="trailing" secondItem="Ki0-gY-y2Q" secondAttribute="trailing" constant="20" id="twt-XA-2fa"/>
+                <constraint firstItem="vV5-X0-Hbj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="v1I-3a-jCb"/>
+                <constraint firstItem="iTY-XR-W4a" firstAttribute="height" secondItem="vV5-X0-Hbj" secondAttribute="height" id="xbI-ev-Tk8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="BullPokerFive" destination="JG9-4R-6li" id="vHq-Bq-HIc"/>
+                <outlet property="BullPokerFiveLeftLeding" destination="SUN-5M-Thd" id="JIK-bT-ncp"/>
+                <outlet property="BullPokerFour" destination="HXc-3g-IW9" id="3mf-mR-lkC"/>
+                <outlet property="BullPokerFourLeftLeading" destination="NmB-C6-njp" id="oBG-j3-V1p"/>
+                <outlet property="BullPokerOne" destination="vV5-X0-Hbj" id="8T3-Rw-FJV"/>
+                <outlet property="BullPokerThree" destination="iTY-XR-W4a" id="glg-PX-WXG"/>
+                <outlet property="BullPokerThreeLeftLeading" destination="sMj-vR-gLv" id="9eL-T1-sVw"/>
+                <outlet property="BullPokerTwo" destination="7vk-wj-Ua9" id="BAP-GY-MvK"/>
+                <outlet property="BullPokerTwoLeftLeading" destination="1vM-9K-c0L" id="l5c-To-DEk"/>
+                <outlet property="pokerResultView" destination="Ki0-gY-y2Q" id="Yxx-cK-v6o"/>
+            </connections>
+            <point key="canvasLocation" x="-187.5" y="-451.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gm_poker_back_niuniu" width="160" height="209"/>
+    </resources>
+</document>

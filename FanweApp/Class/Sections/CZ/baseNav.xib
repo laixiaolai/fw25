@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="baseNav">
+            <connections>
+                <outlet property="mLeftBt" destination="naC-xF-Tdp" id="Nzk-4Z-K8h"/>
+                <outlet property="mLeftImg" destination="DAu-h6-hVp" id="To6-gZ-61r"/>
+                <outlet property="mRightBt" destination="TOU-2I-IgR" id="ZOb-pW-A1D"/>
+                <outlet property="mrightsecond" destination="s1k-uL-W96" id="a1A-Gh-ojC"/>
+                <outlet property="mtitle" destination="mXs-ZJ-GHJ" id="Iq0-Q6-pbL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naC-xF-Tdp">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="UJu-Ii-mOD"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-2I-IgR">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="mcK-CY-kNa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_back" translatesAutoresizingMaskIntoConstraints="NO" id="DAu-h6-hVp">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="lOW-nZ-Sdu"/>
+                        <constraint firstAttribute="width" constant="9" id="ynB-bs-UWU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-ZJ-GHJ">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2mg-dE-C7C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KO-VD-dF4">
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="TeW-ek-Xyw"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-uL-W96">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="K89-AK-FOQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3KO-VD-dF4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1CL-6e-eYc"/>
+                <constraint firstItem="mXs-ZJ-GHJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="5" id="3ct-gd-bDc"/>
+                <constraint firstAttribute="bottom" secondItem="TOU-2I-IgR" secondAttribute="bottom" id="Dr8-0q-VND"/>
+                <constraint firstAttribute="trailing" secondItem="3KO-VD-dF4" secondAttribute="trailing" id="EFA-r6-CAE"/>
+                <constraint firstItem="s1k-uL-W96" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="I7j-UZ-ap2"/>
+                <constraint firstAttribute="bottom" secondItem="naC-xF-Tdp" secondAttribute="bottom" id="Mk4-Gx-uSM"/>
+                <constraint firstItem="DAu-h6-hVp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="5" id="Pzr-cr-LVx"/>
+                <constraint firstItem="3KO-VD-dF4" firstAttribute="top" secondItem="s1k-uL-W96" secondAttribute="bottom" id="QhJ-kx-dIc"/>
+                <constraint firstItem="TOU-2I-IgR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TVM-nj-KPe"/>
+                <constraint firstItem="naC-xF-Tdp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tiy-Rj-UyG"/>
+                <constraint firstItem="mXs-ZJ-GHJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XPa-Tn-QMa"/>
+                <constraint firstItem="TOU-2I-IgR" firstAttribute="leading" secondItem="s1k-uL-W96" secondAttribute="trailing" constant="10" id="ZYb-mX-WOi"/>
+                <constraint firstAttribute="trailing" secondItem="TOU-2I-IgR" secondAttribute="trailing" id="aEB-lH-UDb"/>
+                <constraint firstItem="naC-xF-Tdp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j3c-K0-d5a"/>
+                <constraint firstItem="DAu-h6-hVp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uCy-bZ-wCF"/>
+                <constraint firstAttribute="bottom" secondItem="3KO-VD-dF4" secondAttribute="bottom" id="uuL-pS-26K"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="350" y="257"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="44" height="44"/>
+    </resources>
+</document>

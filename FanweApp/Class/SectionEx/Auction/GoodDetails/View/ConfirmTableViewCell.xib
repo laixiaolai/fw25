@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ConfirmTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击确认，即表示您同意" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lc3-Ij-3v6">
+                        <rect key="frame" x="35" y="0.0" width="160" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="WKC-72-oop"/>
+                            <constraint firstAttribute="height" constant="44" id="cOm-Xv-HXW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C8-Dd-R8y">
+                        <rect key="frame" x="10" y="60" width="299" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="2ub-Ep-eb1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="同意并确认"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-vi-zSF">
+                        <rect key="frame" x="194" y="0.0" width="101" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="1Fd-0k-dld"/>
+                            <constraint firstAttribute="width" constant="101" id="6lN-zl-gvz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="印票网竞拍协议"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLp-SV-2lg">
+                        <rect key="frame" x="10" y="44" width="309" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="tcX-qF-LGS"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-D6-WuR">
+                        <rect key="frame" x="10" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="3si-oW-0Pe"/>
+                            <constraint firstAttribute="width" constant="20" id="Lyj-9E-jFX"/>
+                        </constraints>
+                        <state key="normal" image="com_radio_selected_2"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xg9-vi-zSF" firstAttribute="leading" secondItem="hIK-D6-WuR" secondAttribute="trailing" constant="164" id="5oe-qN-wsp"/>
+                    <constraint firstItem="fLp-SV-2lg" firstAttribute="top" secondItem="Xg9-vi-zSF" secondAttribute="bottom" id="8Uh-er-qiq"/>
+                    <constraint firstItem="Xg9-vi-zSF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GGT-rn-cBh"/>
+                    <constraint firstAttribute="trailing" secondItem="fLp-SV-2lg" secondAttribute="trailing" id="I0T-Hj-c5x"/>
+                    <constraint firstItem="0C8-Dd-R8y" firstAttribute="top" secondItem="fLp-SV-2lg" secondAttribute="bottom" constant="15" id="ISi-Sa-OKO"/>
+                    <constraint firstItem="lc3-Ij-3v6" firstAttribute="leading" secondItem="hIK-D6-WuR" secondAttribute="trailing" constant="5" id="ROp-5j-0dy"/>
+                    <constraint firstItem="0C8-Dd-R8y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="SxB-b4-pot"/>
+                    <constraint firstItem="lc3-Ij-3v6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WTB-Ru-gLi"/>
+                    <constraint firstAttribute="trailing" secondItem="0C8-Dd-R8y" secondAttribute="trailing" constant="10" id="fk0-6p-nm5"/>
+                    <constraint firstItem="hIK-D6-WuR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="rgC-9g-jjK"/>
+                    <constraint firstItem="fLp-SV-2lg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vBT-gd-Fut"/>
+                    <constraint firstItem="hIK-D6-WuR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xhb-eP-bZe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="comfirmButton" destination="0C8-Dd-R8y" id="6rX-c9-wPC"/>
+                <outlet property="lineView" destination="fLp-SV-2lg" id="hJZ-h4-lE0"/>
+                <outlet property="protocolButton" destination="Xg9-vi-zSF" id="uHR-2F-Z41"/>
+                <outlet property="protocolLabel" destination="lc3-Ij-3v6" id="BgZ-cx-Em6"/>
+            </connections>
+            <point key="canvasLocation" x="279.5" y="339"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="com_radio_selected_2" width="23" height="23"/>
+    </resources>
+</document>

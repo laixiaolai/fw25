@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="privateLetterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prT-Ls-eTi">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-CJ-6Yy">
+                            <rect key="frame" x="100" y="0.0" width="60" height="40"/>
+                            <state key="normal" title="好友"/>
+                            <connections>
+                                <action selector="goodFriendClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="QX2-0U-dOt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-CI-Vv6">
+                            <rect key="frame" x="160" y="0.0" width="60" height="40"/>
+                            <state key="normal" title="未关注"/>
+                            <connections>
+                                <action selector="notConcernClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="LFa-HC-YGW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poC-le-QW9">
+                            <rect key="frame" x="241" y="0.0" width="74" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title="忽略未读"/>
+                            <connections>
+                                <action selector="notReadingClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="rOa-Jd-QeQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="k1H-H4-7GG"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wnR-N1-4rc">
+                    <rect key="frame" x="0.0" y="41" width="320" height="199"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6m-NN-WhM">
+                    <rect key="frame" x="0.0" y="40" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tIV-2t-VSe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="prT-Ls-eTi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0tc-oo-g5f"/>
+                <constraint firstItem="J6m-NN-WhM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3c8-fJ-KiS"/>
+                <constraint firstItem="wnR-N1-4rc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Abb-CC-X7I"/>
+                <constraint firstAttribute="bottom" secondItem="wnR-N1-4rc" secondAttribute="bottom" id="Avs-64-cf5"/>
+                <constraint firstItem="prT-Ls-eTi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FsU-i8-oTy"/>
+                <constraint firstItem="wnR-N1-4rc" firstAttribute="top" secondItem="J6m-NN-WhM" secondAttribute="bottom" id="Kwk-B1-GaO"/>
+                <constraint firstAttribute="trailing" secondItem="prT-Ls-eTi" secondAttribute="trailing" id="NVC-KX-pTt"/>
+                <constraint firstAttribute="trailing" secondItem="J6m-NN-WhM" secondAttribute="trailing" id="XYD-pl-CYb"/>
+                <constraint firstAttribute="trailing" secondItem="wnR-N1-4rc" secondAttribute="trailing" id="b36-f2-KKe"/>
+                <constraint firstItem="J6m-NN-WhM" firstAttribute="top" secondItem="prT-Ls-eTi" secondAttribute="bottom" id="eJ6-lc-dhO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttomView" destination="prT-Ls-eTi" id="nj2-Za-liS"/>
+                <outlet property="goodFriendButton" destination="OOx-CJ-6Yy" id="T8q-b4-kmA"/>
+                <outlet property="myTableView" destination="wnR-N1-4rc" id="OyQ-Th-ydt"/>
+                <outlet property="notConcernButton" destination="B9l-CI-Vv6" id="Wmv-XP-WXq"/>
+                <outlet property="notReadingButton" destination="poC-le-QW9" id="Z0p-dr-GeL"/>
+            </connections>
+        </view>
+    </objects>
+</document>

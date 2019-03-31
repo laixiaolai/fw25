@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YunMusicPlayVC">
+            <connections>
+                <outlet property="lrcView" destination="cbe-lZ-wQp" id="UI7-hW-WKx"/>
+                <outlet property="misicEnd_Btn" destination="3y8-2t-Kef" id="VDy-tv-9XD"/>
+                <outlet property="musicName_Lab" destination="EK0-nx-xFf" id="xPc-eR-Yzb"/>
+                <outlet property="pauseMusic_Btn" destination="Wlw-L0-QpI" id="yZQ-43-BSB"/>
+                <outlet property="soundEffect_Btn" destination="hsd-CB-BRK" id="PXw-nF-mW2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="458" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-CB-BRK">
+                    <rect key="frame" x="10" y="10" width="60" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0Fe-e5-PaA"/>
+                        <constraint firstAttribute="width" constant="60" id="K3y-N4-1FR"/>
+                    </constraints>
+                    <state key="normal" image="ic_music_eff"/>
+                    <connections>
+                        <action selector="soundefectSet:" destination="-1" eventType="touchUpInside" id="ImF-xA-eLY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3y8-2t-Kef">
+                    <rect key="frame" x="80" y="10" width="60" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="ic_music_stop"/>
+                    <connections>
+                        <action selector="soundEndBtnClick:" destination="-1" eventType="touchUpInside" id="H1s-HI-Y1g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlw-L0-QpI">
+                    <rect key="frame" x="10" y="42" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="pK1-gx-f0O"/>
+                        <constraint firstAttribute="width" constant="30" id="tx5-HK-JBa"/>
+                    </constraints>
+                    <state key="normal" image="fw_relive_suspend"/>
+                    <connections>
+                        <action selector="pauseMusic:" destination="-1" eventType="touchUpInside" id="05D-G7-JZP"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK0-nx-xFf">
+                    <rect key="frame" x="48" y="42" width="402" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="J8g-Rk-zn7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbe-lZ-wQp" customClass="LrcShowView">
+                    <rect key="frame" x="10" y="74" width="428" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="C9y-2t-IVB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wlw-L0-QpI" firstAttribute="top" secondItem="hsd-CB-BRK" secondAttribute="bottom" constant="2" id="1CF-4h-WLL"/>
+                <constraint firstItem="cbe-lZ-wQp" firstAttribute="top" secondItem="EK0-nx-xFf" secondAttribute="bottom" constant="2" id="7aT-Tf-kRC"/>
+                <constraint firstItem="cbe-lZ-wQp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="FPZ-je-WuQ"/>
+                <constraint firstItem="3y8-2t-Kef" firstAttribute="height" secondItem="hsd-CB-BRK" secondAttribute="height" id="Jvv-Xo-vVR"/>
+                <constraint firstItem="3y8-2t-Kef" firstAttribute="leading" secondItem="hsd-CB-BRK" secondAttribute="trailing" constant="10" id="M9S-fs-7bj"/>
+                <constraint firstItem="3y8-2t-Kef" firstAttribute="centerY" secondItem="hsd-CB-BRK" secondAttribute="centerY" id="NCG-6q-8MI"/>
+                <constraint firstItem="3y8-2t-Kef" firstAttribute="width" secondItem="hsd-CB-BRK" secondAttribute="width" id="U1M-BJ-Slu"/>
+                <constraint firstItem="Wlw-L0-QpI" firstAttribute="leading" secondItem="hsd-CB-BRK" secondAttribute="leading" id="Y28-ZN-SKH"/>
+                <constraint firstItem="hsd-CB-BRK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="YH7-ei-oJ8"/>
+                <constraint firstItem="hsd-CB-BRK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ZbR-k7-NmJ"/>
+                <constraint firstItem="EK0-nx-xFf" firstAttribute="leading" secondItem="Wlw-L0-QpI" secondAttribute="trailing" constant="8" id="jkY-kl-q2f"/>
+                <constraint firstAttribute="trailing" secondItem="cbe-lZ-wQp" secondAttribute="trailing" constant="20" id="oHU-C3-Cge"/>
+                <constraint firstAttribute="trailing" secondItem="EK0-nx-xFf" secondAttribute="trailing" constant="8" id="qB3-VU-vv7"/>
+                <constraint firstItem="EK0-nx-xFf" firstAttribute="centerY" secondItem="Wlw-L0-QpI" secondAttribute="centerY" id="r2s-Qq-8qG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="35" y="-149"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fw_relive_suspend" width="109" height="109"/>
+        <image name="ic_music_eff" width="63" height="23"/>
+        <image name="ic_music_stop" width="63" height="23"/>
+    </resources>
+</document>

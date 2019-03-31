@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SaleCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="com_diamond_1" translatesAutoresizingMaskIntoConstraints="NO" id="wuv-Oe-uTg">
+                        <rect key="frame" x="188" y="14.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="G8t-JL-0Up"/>
+                            <constraint firstAttribute="width" constant="15" id="eiR-3T-cKm"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_more_choose" translatesAutoresizingMaskIntoConstraints="NO" id="p1a-ww-t1b">
+                        <rect key="frame" x="289" y="16" width="15" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="UBS-Fg-WP8"/>
+                            <constraint firstAttribute="height" constant="12" id="i49-xj-iJN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L7-qB-5OH">
+                        <rect key="frame" x="211" y="8" width="70" height="27.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="diW-eZ-7X3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我拍卖的商品收入：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS6-H5-Q20">
+                        <rect key="frame" x="16" y="8" width="150" height="27.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="HoB-Cj-Fcm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="p1a-ww-t1b" firstAttribute="leading" secondItem="5L7-qB-5OH" secondAttribute="trailing" constant="8" id="Ink-pJ-qmA"/>
+                    <constraint firstItem="p1a-ww-t1b" firstAttribute="centerY" secondItem="tS6-H5-Q20" secondAttribute="centerY" id="KU9-18-Ekx"/>
+                    <constraint firstAttribute="bottom" secondItem="5L7-qB-5OH" secondAttribute="bottom" constant="8" id="KpL-T9-2nb"/>
+                    <constraint firstItem="5L7-qB-5OH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YwQ-gQ-1AW"/>
+                    <constraint firstAttribute="bottom" secondItem="tS6-H5-Q20" secondAttribute="bottom" constant="8" id="cpH-s3-oyx"/>
+                    <constraint firstItem="5L7-qB-5OH" firstAttribute="leading" secondItem="wuv-Oe-uTg" secondAttribute="trailing" constant="8" id="dRc-IY-ZDZ"/>
+                    <constraint firstItem="wuv-Oe-uTg" firstAttribute="centerY" secondItem="tS6-H5-Q20" secondAttribute="centerY" id="fHE-F0-iaz"/>
+                    <constraint firstItem="tS6-H5-Q20" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="gjf-lG-srV"/>
+                    <constraint firstAttribute="trailing" secondItem="p1a-ww-t1b" secondAttribute="trailing" constant="16" id="h6O-6g-QXG"/>
+                    <constraint firstItem="tS6-H5-Q20" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wYQ-Z4-BBl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="diamond_ImgView" destination="wuv-Oe-uTg" id="ezm-t0-HCE"/>
+                <outlet property="expand_ImgView" destination="p1a-ww-t1b" id="2Mb-0F-Q0U"/>
+                <outlet property="left_Name_Lab" destination="tS6-H5-Q20" id="esR-XR-Bhe"/>
+                <outlet property="right_Num_Lab" destination="5L7-qB-5OH" id="0eL-LG-750"/>
+            </connections>
+            <point key="canvasLocation" x="318" y="226"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="com_diamond_1" width="10" height="8"/>
+        <image name="me_more_choose" width="12" height="6"/>
+    </resources>
+</document>

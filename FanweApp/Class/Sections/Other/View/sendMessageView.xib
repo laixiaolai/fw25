@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="sendMessageView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-Cd-d4U">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9iX-Qg-zQA">
+                            <rect key="frame" x="40" y="5" width="203" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gik-Id-Ktj">
+                            <rect key="frame" x="8" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="20X-es-SOP"/>
+                                <constraint firstAttribute="width" constant="24" id="cOa-Zi-cTt"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgM-Vk-qfF">
+                            <rect key="frame" x="251" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="Og7-Ss-ae6"/>
+                                <constraint firstAttribute="height" constant="24" id="eQp-AZ-75S"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iMC-IJ-Bgf">
+                            <rect key="frame" x="288" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="NKR-f5-MLz"/>
+                                <constraint firstAttribute="height" constant="24" id="XbX-wc-gfZ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="9iX-Qg-zQA" firstAttribute="leading" secondItem="gik-Id-Ktj" secondAttribute="trailing" constant="8" id="4iS-gy-d9T"/>
+                        <constraint firstItem="iMC-IJ-Bgf" firstAttribute="leading" secondItem="tgM-Vk-qfF" secondAttribute="trailing" constant="13" id="8ZQ-PV-Yda"/>
+                        <constraint firstItem="gik-Id-Ktj" firstAttribute="top" secondItem="fZF-Cd-d4U" secondAttribute="top" constant="8" id="A3b-5Y-XHc"/>
+                        <constraint firstAttribute="bottom" secondItem="9iX-Qg-zQA" secondAttribute="bottom" constant="5" id="B6a-c9-6Cf"/>
+                        <constraint firstItem="tgM-Vk-qfF" firstAttribute="leading" secondItem="9iX-Qg-zQA" secondAttribute="trailing" constant="8" id="BjN-7P-HJ6"/>
+                        <constraint firstAttribute="trailing" secondItem="iMC-IJ-Bgf" secondAttribute="trailing" constant="8" id="DXH-sZ-VmD"/>
+                        <constraint firstItem="gik-Id-Ktj" firstAttribute="leading" secondItem="fZF-Cd-d4U" secondAttribute="leading" constant="8" id="Y0p-0q-WCF"/>
+                        <constraint firstItem="tgM-Vk-qfF" firstAttribute="top" secondItem="fZF-Cd-d4U" secondAttribute="top" constant="8" id="bop-Xi-okO"/>
+                        <constraint firstItem="9iX-Qg-zQA" firstAttribute="top" secondItem="fZF-Cd-d4U" secondAttribute="top" constant="5" id="ide-BU-e8v"/>
+                        <constraint firstItem="iMC-IJ-Bgf" firstAttribute="top" secondItem="fZF-Cd-d4U" secondAttribute="top" constant="8" id="vlp-U9-Wwf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fZF-Cd-d4U" secondAttribute="bottom" id="OHg-sb-Tjx"/>
+                <constraint firstAttribute="trailing" secondItem="fZF-Cd-d4U" secondAttribute="trailing" id="kQ2-Ed-WIt"/>
+                <constraint firstItem="fZF-Cd-d4U" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ojw-Gp-dvC"/>
+                <constraint firstItem="fZF-Cd-d4U" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wqJ-bI-xCn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addImgView" destination="iMC-IJ-Bgf" id="nnx-2M-D7s"/>
+                <outlet property="backView" destination="fZF-Cd-d4U" id="hKA-nQ-nh2"/>
+                <outlet property="expressionView" destination="tgM-Vk-qfF" id="2oy-D1-MgY"/>
+                <outlet property="messageFiled" destination="9iX-Qg-zQA" id="9nA-ch-nIb"/>
+                <outlet property="soundView" destination="gik-Id-Ktj" id="4m3-Xk-Ad4"/>
+            </connections>
+            <point key="canvasLocation" x="490" y="255"/>
+        </view>
+    </objects>
+</document>

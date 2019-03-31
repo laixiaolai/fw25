@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="KGk-i7-Jjw" customClass="STTableShowVideoCell">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HLd-W5-jTp">
+                        <rect key="frame" x="0.0" y="0.0" width="399" height="198.5"/>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kDefaultPreloadImgSquare" translatesAutoresizingMaskIntoConstraints="NO" id="UgQ-tT-41o">
+                        <rect key="frame" x="119" y="20" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="3Sl-aF-iF5"/>
+                            <constraint firstAttribute="height" constant="160" id="nuX-0n-rtW"/>
+                        </constraints>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1N-I8-k7I">
+                        <rect key="frame" x="119" y="20" width="160" height="160"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="changeVideoCoverClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wN6-2z-QHA"/>
+                        </connections>
+                    </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑封面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97i-nf-yam">
+                        <rect key="frame" x="119" y="158.5" width="160" height="21"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="POH-2O-GXN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="st_videoDynamic_changeVideo" translatesAutoresizingMaskIntoConstraints="NO" id="87h-iS-Cm1">
+                        <rect key="frame" x="303" y="13" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Aml-AQ-CD8"/>
+                            <constraint firstAttribute="width" constant="20" id="q8a-dw-7qd"/>
+                        </constraints>
+                    </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更改视频" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-wM-tjr">
+                        <rect key="frame" x="331" y="8" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Wiz-ix-Esm"/>
+                            <constraint firstAttribute="width" constant="60" id="w9Y-Bk-Wsu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkB-BV-dWF">
+                        <rect key="frame" x="299" y="0.0" width="100" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="UTy-Kt-uD5"/>
+                            <constraint firstAttribute="width" constant="100" id="c5o-Um-4FF"/>
+                        </constraints>
+                        <connections>
+                            <action selector="changeVideoClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="785-zd-wxM"/>
+                        </connections>
+                    </button>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-XD-XSH">
+                        <rect key="frame" x="8" y="198.5" width="391" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="0Ib-He-b3o"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="97i-nf-yam" firstAttribute="bottom" secondItem="UgQ-tT-41o" secondAttribute="bottom" id="22D-Do-erE"/>
+                    <constraint firstItem="M1N-I8-k7I" firstAttribute="top" secondItem="UgQ-tT-41o" secondAttribute="top" id="52V-oR-9VE"/>
+                    <constraint firstItem="iIk-wM-tjr" firstAttribute="centerY" secondItem="87h-iS-Cm1" secondAttribute="centerY" id="7X5-K8-67r"/>
+                    <constraint firstItem="97i-nf-yam" firstAttribute="trailing" secondItem="UgQ-tT-41o" secondAttribute="trailing" id="8AZ-eJ-Ba9"/>
+                    <constraint firstItem="iIk-wM-tjr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="BcT-le-0Lg"/>
+                    <constraint firstItem="M1N-I8-k7I" firstAttribute="leading" secondItem="UgQ-tT-41o" secondAttribute="leading" id="C3O-ua-VkD"/>
+                    <constraint firstItem="M1N-I8-k7I" firstAttribute="bottom" secondItem="UgQ-tT-41o" secondAttribute="bottom" id="GNM-JW-KOh"/>
+                    <constraint firstAttribute="trailing" secondItem="hAf-XD-XSH" secondAttribute="trailing" id="GO1-k8-1Cz"/>
+                    <constraint firstItem="HLd-W5-jTp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GsF-A5-0SK"/>
+                    <constraint firstItem="UgQ-tT-41o" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="J8o-o2-M9x"/>
+                    <constraint firstAttribute="trailing" secondItem="HLd-W5-jTp" secondAttribute="trailing" id="LMx-0w-Nf6"/>
+                    <constraint firstItem="hAf-XD-XSH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="OQn-7B-Fgg"/>
+                    <constraint firstItem="UgQ-tT-41o" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SUy-ic-KDw"/>
+                    <constraint firstAttribute="trailing" secondItem="XkB-BV-dWF" secondAttribute="trailing" id="W1C-DG-3TW"/>
+                    <constraint firstItem="hAf-XD-XSH" firstAttribute="top" secondItem="HLd-W5-jTp" secondAttribute="bottom" id="fmf-aW-Xa7"/>
+                    <constraint firstItem="iIk-wM-tjr" firstAttribute="leading" secondItem="87h-iS-Cm1" secondAttribute="trailing" constant="8" id="gBN-mO-FX4"/>
+                    <constraint firstItem="97i-nf-yam" firstAttribute="leading" secondItem="UgQ-tT-41o" secondAttribute="leading" id="ilV-tG-s8N"/>
+                    <constraint firstAttribute="trailing" secondItem="iIk-wM-tjr" secondAttribute="trailing" constant="8" id="kfD-m0-M1I"/>
+                    <constraint firstAttribute="bottom" secondItem="hAf-XD-XSH" secondAttribute="bottom" id="lNm-d1-aW4"/>
+                    <constraint firstItem="M1N-I8-k7I" firstAttribute="trailing" secondItem="UgQ-tT-41o" secondAttribute="trailing" id="p6h-yr-472"/>
+                    <constraint firstItem="HLd-W5-jTp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qQn-N4-67f"/>
+                    <constraint firstItem="XkB-BV-dWF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yOK-FV-79l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgImgView" destination="HLd-W5-jTp" id="3u2-Av-h1r"/>
+                <outlet property="changeCoverBtn" destination="M1N-I8-k7I" id="Voi-hq-hb3"/>
+                <outlet property="changeVideoBtn" destination="XkB-BV-dWF" id="ivW-j2-rHY"/>
+                <outlet property="changeVideoIconImgeView" destination="87h-iS-Cm1" id="kHz-A6-eKL"/>
+                <outlet property="changeVideoLab" destination="iIk-wM-tjr" id="oUL-gC-Ddi"/>
+                <outlet property="promptLab" destination="97i-nf-yam" id="EfG-Sb-ZbH"/>
+                <outlet property="separatorView" destination="hAf-XD-XSH" id="vDK-oo-I7b"/>
+                <outlet property="videoCoverImgView" destination="UgQ-tT-41o" id="WC7-hQ-suV"/>
+            </connections>
+            <point key="canvasLocation" x="206" y="108"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="kDefaultPreloadImgSquare" width="16" height="16"/>
+        <image name="st_videoDynamic_changeVideo" width="15" height="15"/>
+    </resources>
+</document>

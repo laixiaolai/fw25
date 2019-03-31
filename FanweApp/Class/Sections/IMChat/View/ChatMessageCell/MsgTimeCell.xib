@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MsgTimeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="29.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alE-z5-ZkC">
+                        <rect key="frame" x="140.5" y="3" width="39.5" height="21"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPf-oD-B4n">
+                                <rect key="frame" x="4" y="1" width="31.5" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="qVF-XH-3LP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79607843140000001" green="0.78823529410000004" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fPf-oD-B4n" firstAttribute="leading" secondItem="alE-z5-ZkC" secondAttribute="leading" constant="4" id="6Ed-Xh-JHi"/>
+                            <constraint firstAttribute="trailing" secondItem="fPf-oD-B4n" secondAttribute="trailing" constant="4" id="JjT-bY-WUx"/>
+                            <constraint firstItem="fPf-oD-B4n" firstAttribute="top" secondItem="alE-z5-ZkC" secondAttribute="top" constant="1" id="Kbv-Yl-AAQ"/>
+                            <constraint firstAttribute="bottom" secondItem="fPf-oD-B4n" secondAttribute="bottom" constant="1" id="V3i-yD-Fue"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="alE-z5-ZkC" secondAttribute="bottom" constant="3" id="3Sp-Pj-ohM"/>
+                    <constraint firstItem="alE-z5-ZkC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Wub-h4-DU7"/>
+                    <constraint firstItem="alE-z5-ZkC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aYJ-J7-o48"/>
+                    <constraint firstItem="alE-z5-ZkC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="p3e-Lx-dpE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="mbgview" destination="alE-z5-ZkC" id="XOo-4u-z49"/>
+                <outlet property="mtimelabel" destination="fPf-oD-B4n" id="C5X-E3-Rwr"/>
+            </connections>
+            <point key="canvasLocation" x="398" y="417"/>
+        </tableViewCell>
+    </objects>
+</document>

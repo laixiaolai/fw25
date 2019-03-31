@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameGiftCell">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="485"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="485"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4V-TX-CKy">
+                        <rect key="frame" x="200.5" y="462" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-eT-XMz">
+                        <rect key="frame" x="201" y="407" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="2Sz-sb-vTX"/>
+                            <constraint firstAttribute="width" constant="50" id="ZtB-lW-d9o"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fw_liveRoom_continueGift_chosen" translatesAutoresizingMaskIntoConstraints="NO" id="osa-Hb-u6u">
+                        <rect key="frame" x="5" y="5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Xs4-xT-czG"/>
+                            <constraint firstAttribute="width" constant="15" id="nmh-HA-esO"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="com_diamond_1" translatesAutoresizingMaskIntoConstraints="NO" id="KLN-la-XJs">
+                        <rect key="frame" x="241" y="467" width="12" height="9"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="9" id="Jvh-TB-kUz"/>
+                            <constraint firstAttribute="width" constant="12" id="V1o-3Q-f2w"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="n4V-TX-CKy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-7" id="6kC-c3-ZnS"/>
+                <constraint firstItem="KLN-la-XJs" firstAttribute="centerY" secondItem="n4V-TX-CKy" secondAttribute="centerY" id="7Cp-cJ-JhM"/>
+                <constraint firstItem="RPc-eT-XMz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Do1-ll-mz6"/>
+                <constraint firstItem="osa-Hb-u6u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="QqX-9e-iBu"/>
+                <constraint firstItem="osa-Hb-u6u" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="VgG-yG-hWo"/>
+                <constraint firstAttribute="bottom" secondItem="n4V-TX-CKy" secondAttribute="bottom" constant="5" id="WFF-rl-h4k"/>
+                <constraint firstItem="n4V-TX-CKy" firstAttribute="top" secondItem="RPc-eT-XMz" secondAttribute="bottom" constant="5" id="iY0-oN-2eH"/>
+                <constraint firstItem="KLN-la-XJs" firstAttribute="leading" secondItem="n4V-TX-CKy" secondAttribute="trailing" constant="3" id="sEf-ha-14z"/>
+            </constraints>
+            <size key="customSize" width="452" height="485"/>
+            <connections>
+                <outlet property="diamondImageView" destination="KLN-la-XJs" id="OtJ-5g-3mC"/>
+                <outlet property="diamondLabel" destination="n4V-TX-CKy" id="6EJ-3f-HFM"/>
+                <outlet property="giftImageView" destination="RPc-eT-XMz" id="rUf-bc-cU5"/>
+                <outlet property="selectedImageView" destination="osa-Hb-u6u" id="Rjg-ix-EaM"/>
+            </connections>
+            <point key="canvasLocation" x="233" y="121.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="com_diamond_1" width="10" height="8"/>
+        <image name="fw_liveRoom_continueGift_chosen" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="STPromptView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74c-xl-K3w">
+                    <rect key="frame" x="47.5" y="158.5" width="280" height="350"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="st_saleWechat_salePromp" translatesAutoresizingMaskIntoConstraints="NO" id="sHR-ve-5ke">
+                            <rect key="frame" x="-0.5" y="-0.5" width="280" height="350"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt0-Nl-9HT">
+                            <rect key="frame" x="20" y="283" width="236" height="47"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="我知道了">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showConfirm:" destination="iN0-l3-epB" eventType="touchUpInside" id="BxV-uW-Olt"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="sHR-ve-5ke" firstAttribute="top" secondItem="74c-xl-K3w" secondAttribute="top" id="AYd-8R-1yO"/>
+                        <constraint firstItem="Tt0-Nl-9HT" firstAttribute="leading" secondItem="74c-xl-K3w" secondAttribute="leading" constant="20" id="GR9-kY-rXr"/>
+                        <constraint firstAttribute="width" constant="280" id="J2g-ff-XPU"/>
+                        <constraint firstAttribute="bottom" secondItem="sHR-ve-5ke" secondAttribute="bottom" id="PUV-Fk-Yfa"/>
+                        <constraint firstAttribute="trailing" secondItem="sHR-ve-5ke" secondAttribute="trailing" id="UoO-2M-rQf"/>
+                        <constraint firstAttribute="height" constant="350" id="Wg2-mW-nTW"/>
+                        <constraint firstItem="Tt0-Nl-9HT" firstAttribute="top" secondItem="74c-xl-K3w" secondAttribute="top" constant="283" id="eZz-Co-Eeh"/>
+                        <constraint firstAttribute="trailing" secondItem="Tt0-Nl-9HT" secondAttribute="trailing" constant="24" id="n9X-j6-NCv"/>
+                        <constraint firstItem="sHR-ve-5ke" firstAttribute="leading" secondItem="74c-xl-K3w" secondAttribute="leading" id="p3p-Ad-kAt"/>
+                        <constraint firstAttribute="bottom" secondItem="Tt0-Nl-9HT" secondAttribute="bottom" constant="20" id="zKt-5h-MOc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="74c-xl-K3w" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="I2w-nz-CBb"/>
+                <constraint firstItem="74c-xl-K3w" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ceU-Mi-myU"/>
+            </constraints>
+            <connections>
+                <outlet property="confirmBtn" destination="Tt0-Nl-9HT" id="TEu-FY-3EX"/>
+                <outlet property="promptBgImgView" destination="sHR-ve-5ke" id="zQ4-wR-d0U"/>
+                <outlet property="promptView" destination="74c-xl-K3w" id="W0R-nb-jDr"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="st_saleWechat_salePromp" width="275" height="351"/>
+    </resources>
+</document>

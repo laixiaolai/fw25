@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TexasPokerBetween">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_goldflower" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-vq-ayQ" userLabel="TexasPokerOne">
+                    <rect key="frame" x="2" y="0.0" width="100.5" height="665"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_goldflower" translatesAutoresizingMaskIntoConstraints="NO" id="G9g-GW-Ecu" userLabel="TexasPokerTwo">
+                    <rect key="frame" x="20" y="0.0" width="100.5" height="665"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_goldflower" translatesAutoresizingMaskIntoConstraints="NO" id="UMz-qF-9Ms" userLabel="TexasPokerThree">
+                    <rect key="frame" x="40" y="0.0" width="100.5" height="665"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_goldflower" translatesAutoresizingMaskIntoConstraints="NO" id="Zcl-K9-3SF" userLabel="TexasPokerFour">
+                    <rect key="frame" x="60" y="0.0" width="100.5" height="665"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gm_poker_back_goldflower" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-ym-s9J" userLabel="TexasPokerFive">
+                    <rect key="frame" x="80" y="0.0" width="100.5" height="665"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-61-RnT" userLabel="PokerResultView">
+                    <rect key="frame" x="20" y="633" width="335" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="97Z-rq-4LZ"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zcl-K9-3SF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="0x7-3J-yIF"/>
+                <constraint firstItem="UMz-qF-9Ms" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="237-Ff-WfQ"/>
+                <constraint firstAttribute="bottom" secondItem="Kh4-vq-ayQ" secondAttribute="bottom" constant="2" id="2ee-r4-pk1"/>
+                <constraint firstItem="pXb-ym-s9J" firstAttribute="top" secondItem="Kh4-vq-ayQ" secondAttribute="top" id="2ma-gq-C2m"/>
+                <constraint firstItem="UMz-qF-9Ms" firstAttribute="height" secondItem="Kh4-vq-ayQ" secondAttribute="height" id="8Ls-UU-gwa"/>
+                <constraint firstAttribute="bottom" secondItem="8c5-61-RnT" secondAttribute="bottom" constant="10" id="8Uu-yt-7jS"/>
+                <constraint firstItem="UMz-qF-9Ms" firstAttribute="width" secondItem="Kh4-vq-ayQ" secondAttribute="width" id="ESc-cq-LwX"/>
+                <constraint firstItem="Kh4-vq-ayQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3:11" constant="-1" id="IqD-Ld-BkU"/>
+                <constraint firstItem="pXb-ym-s9J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="L3L-y1-3gK"/>
+                <constraint firstItem="G9g-GW-Ecu" firstAttribute="width" secondItem="Kh4-vq-ayQ" secondAttribute="width" id="PZY-Mn-Jnc"/>
+                <constraint firstItem="pXb-ym-s9J" firstAttribute="height" secondItem="Kh4-vq-ayQ" secondAttribute="height" id="XKC-xe-VlJ"/>
+                <constraint firstItem="G9g-GW-Ecu" firstAttribute="height" secondItem="Kh4-vq-ayQ" secondAttribute="height" id="cAt-qu-omd"/>
+                <constraint firstItem="8c5-61-RnT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dUH-Bi-zyE"/>
+                <constraint firstItem="UMz-qF-9Ms" firstAttribute="top" secondItem="Kh4-vq-ayQ" secondAttribute="top" id="dyH-fH-uLu"/>
+                <constraint firstItem="Zcl-K9-3SF" firstAttribute="height" secondItem="Kh4-vq-ayQ" secondAttribute="height" id="fgr-l2-ynQ"/>
+                <constraint firstItem="G9g-GW-Ecu" firstAttribute="top" secondItem="Kh4-vq-ayQ" secondAttribute="top" id="gbt-G6-CDe"/>
+                <constraint firstAttribute="trailing" secondItem="8c5-61-RnT" secondAttribute="trailing" constant="20" id="hpL-Fd-e0S"/>
+                <constraint firstItem="pXb-ym-s9J" firstAttribute="width" secondItem="Kh4-vq-ayQ" secondAttribute="width" id="hwu-Mi-qCb"/>
+                <constraint firstItem="G9g-GW-Ecu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="iin-3z-1Qg"/>
+                <constraint firstItem="Zcl-K9-3SF" firstAttribute="top" secondItem="Kh4-vq-ayQ" secondAttribute="top" id="lc3-7f-iwn"/>
+                <constraint firstItem="Zcl-K9-3SF" firstAttribute="width" secondItem="Kh4-vq-ayQ" secondAttribute="width" id="sjL-wk-ETE"/>
+                <constraint firstItem="Kh4-vq-ayQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uYV-db-E82"/>
+                <constraint firstItem="Kh4-vq-ayQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="xJd-XZ-0vA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="pokerResultView" destination="8c5-61-RnT" id="VMd-Nk-82j"/>
+                <outlet property="texasPokerFive" destination="pXb-ym-s9J" id="xxd-dS-jkF"/>
+                <outlet property="texasPokerFiveLeftLeading" destination="L3L-y1-3gK" id="e9k-K1-5Rx"/>
+                <outlet property="texasPokerFour" destination="Zcl-K9-3SF" id="VeR-IQ-SZk"/>
+                <outlet property="texasPokerFourLeftLeading" destination="0x7-3J-yIF" id="jHm-sJ-lD2"/>
+                <outlet property="texasPokerOne" destination="Kh4-vq-ayQ" id="ztJ-77-Z77"/>
+                <outlet property="texasPokerThree" destination="UMz-qF-9Ms" id="SaA-yv-7wf"/>
+                <outlet property="texasPokerThreeLeftLeading" destination="237-Ff-WfQ" id="dvd-kQ-w9F"/>
+                <outlet property="texasPokerTwo" destination="G9g-GW-Ecu" id="01b-L2-2o2"/>
+                <outlet property="texasPokerTwoLeftLeading" destination="iin-3z-1Qg" id="mZB-hF-NvU"/>
+            </connections>
+            <point key="canvasLocation" x="-112" y="19"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gm_poker_back_goldflower" width="160" height="209"/>
+    </resources>
+</document>

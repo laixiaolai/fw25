@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="248" id="KGk-i7-Jjw" customClass="AuctionCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="247"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-Ge-0hc">
+                        <frame key="frameInset" minX="32" minY="40" width="255" height="50"/>
+                        <color key="backgroundColor" red="0.77599084377288818" green="0.91264206171035767" blue="0.48690670728683472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="HbV-4Q-riZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="兑换"/>
+                        <connections>
+                            <action selector="goNextVC:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TW8-02-aTg"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDr-dq-xpu">
+                        <color key="backgroundColor" red="0.77599084377288818" green="0.91264206171035767" blue="0.48690670728683472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ybz-Rz-WQS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="领取劳务费"/>
+                        <connections>
+                            <action selector="goNextVC:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z1x-nr-dBj"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Bnf-Ge-0hc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="1jf-kJ-JTL"/>
+                    <constraint firstItem="Bnf-Ge-0hc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="2mk-e9-jgR"/>
+                    <constraint firstAttribute="trailing" secondItem="TDr-dq-xpu" secondAttribute="trailing" constant="32" id="FZM-GO-xOi"/>
+                    <constraint firstItem="TDr-dq-xpu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Vln-mt-2oe"/>
+                    <constraint firstAttribute="trailing" secondItem="Bnf-Ge-0hc" secondAttribute="trailing" constant="32" id="fYm-5a-Bqr"/>
+                    <constraint firstItem="TDr-dq-xpu" firstAttribute="top" secondItem="Bnf-Ge-0hc" secondAttribute="bottom" constant="40" id="vMU-F0-kFC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outletCollection property="btn_Array" destination="Bnf-Ge-0hc" id="imt-lE-IQs"/>
+                <outletCollection property="btn_Array" destination="TDr-dq-xpu" id="ydm-tD-kuz"/>
+            </connections>
+            <point key="canvasLocation" x="352" y="335"/>
+        </tableViewCell>
+    </objects>
+</document>

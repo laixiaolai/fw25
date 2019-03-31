@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ApplyBankerView">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="申请上庄金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S43-ZR-XYL">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tlm-mR-OOk">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="135" id="6Aa-gn-JWx"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="底金：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bv-tb-gDu">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的游戏币：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMR-pj-3hb">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhZ-EC-vZ2">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JB9-mI-Sck"/>
+                        <constraint firstAttribute="width" constant="127" id="nXX-iz-Hro"/>
+                    </constraints>
+                    <state key="normal" title="确定"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrX-3f-yYX">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JEq-R1-f7h"/>
+                        <constraint firstAttribute="width" constant="127" id="JIf-8W-nNX"/>
+                    </constraints>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WX-Mt-9gx">
+                    <color key="backgroundColor" red="0.94509804249999996" green="0.24705882370000001" blue="0.058823529630000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="G0F-DC-hxb"/>
+                        <constraint firstAttribute="height" constant="40" id="RHg-Wx-mgI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqe-mq-WQl">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9X7-0r-JGe"/>
+                        <constraint firstAttribute="width" constant="255" id="ynM-bv-kPY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cqe-mq-WQl" secondAttribute="bottom" constant="40" id="1Ja-QV-37p"/>
+                <constraint firstItem="S43-ZR-XYL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="1pz-8t-AGX"/>
+                <constraint firstItem="0WX-Mt-9gx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3SM-AA-DRY"/>
+                <constraint firstItem="xrX-3f-yYX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4Us-sy-XbW"/>
+                <constraint firstAttribute="bottom" secondItem="0WX-Mt-9gx" secondAttribute="bottom" id="6Pa-rt-9N0"/>
+                <constraint firstItem="S43-ZR-XYL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GAC-AA-bfz"/>
+                <constraint firstItem="Tlm-mR-OOk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GqX-Fu-X4m"/>
+                <constraint firstAttribute="bottom" secondItem="xrX-3f-yYX" secondAttribute="bottom" id="K54-d2-AHj"/>
+                <constraint firstItem="Tlm-mR-OOk" firstAttribute="top" secondItem="S43-ZR-XYL" secondAttribute="bottom" constant="15" id="O2z-kn-at5"/>
+                <constraint firstItem="5Bv-tb-gDu" firstAttribute="top" secondItem="Tlm-mR-OOk" secondAttribute="bottom" constant="15" id="O6d-oW-JPd"/>
+                <constraint firstAttribute="trailing" secondItem="PhZ-EC-vZ2" secondAttribute="trailing" id="T53-kb-UfB"/>
+                <constraint firstAttribute="bottom" secondItem="PhZ-EC-vZ2" secondAttribute="bottom" id="UMg-B9-XsZ"/>
+                <constraint firstItem="5Bv-tb-gDu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vaa-uE-TEQ"/>
+                <constraint firstItem="XMR-pj-3hb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fJz-y9-0RP"/>
+                <constraint firstItem="cqe-mq-WQl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gC2-rd-kZI"/>
+                <constraint firstItem="XMR-pj-3hb" firstAttribute="top" secondItem="5Bv-tb-gDu" secondAttribute="bottom" constant="15" id="owC-M9-FTl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="xrX-3f-yYX" id="bdT-vM-SpP"/>
+                <outlet property="coinTextfield" destination="Tlm-mR-OOk" id="8wz-DI-NFO"/>
+                <outlet property="confirmButton" destination="PhZ-EC-vZ2" id="Kcv-gm-wXK"/>
+                <outlet property="horizontalLine" destination="cqe-mq-WQl" id="L3Q-Ko-2CN"/>
+                <outlet property="leastCoinLabel" destination="5Bv-tb-gDu" id="mAs-YC-r6D"/>
+                <outlet property="myCoinLabel" destination="XMR-pj-3hb" id="crN-tT-iiN"/>
+                <outlet property="titleLabel" destination="S43-ZR-XYL" id="RK9-ZH-avx"/>
+                <outlet property="verticalLine" destination="0WX-Mt-9gx" id="fTv-Ri-Tqk"/>
+            </connections>
+            <point key="canvasLocation" x="117.5" y="196.5"/>
+        </view>
+    </objects>
+</document>

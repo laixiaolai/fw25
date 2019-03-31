@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Plane1Controller">
+            <connections>
+                <outlet property="contrainerView" destination="7rp-0s-1aQ" id="3i8-8Y-134"/>
+                <outlet property="senderNameLabel" destination="7mB-3S-4Xb" id="c9i-I5-Dkj"/>
+                <outlet property="view" destination="Wv8-gg-Fo2" id="T1o-yy-b3s"/>
+                <outlet property="wing1" destination="0Wa-sb-0xd" id="FKU-JD-fwV"/>
+                <outlet property="wing2" destination="AHS-4G-ci9" id="H3J-D4-UOB"/>
+                <outlet property="wing3" destination="v4A-Zs-DbY" id="fzl-2o-Vv0"/>
+                <outlet property="wing4" destination="AfH-Ag-MFE" id="TF9-0M-Oz9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Wv8-gg-Fo2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rp-0s-1aQ">
+                    <rect key="frame" x="340" y="0.0" width="260" height="157"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-3S-4Xb">
+                            <rect key="frame" x="0.0" y="0.0" width="260" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Zqq-U2-mPb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fw_gift_plane1" translatesAutoresizingMaskIntoConstraints="NO" id="l13-PQ-Gr5">
+                            <rect key="frame" x="0.0" y="20" width="260" height="129"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fw_gift_plane1_wing" translatesAutoresizingMaskIntoConstraints="NO" id="AfH-Ag-MFE">
+                            <rect key="frame" x="115" y="125" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fw_gift_plane1_wing" translatesAutoresizingMaskIntoConstraints="NO" id="v4A-Zs-DbY">
+                            <rect key="frame" x="78" y="117" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fw_gift_plane1_wing" translatesAutoresizingMaskIntoConstraints="NO" id="0Wa-sb-0xd">
+                            <rect key="frame" x="13" y="81" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fw_gift_plane1_wing" translatesAutoresizingMaskIntoConstraints="NO" id="AHS-4G-ci9">
+                            <rect key="frame" x="31" y="97" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7mB-3S-4Xb" firstAttribute="top" secondItem="7rp-0s-1aQ" secondAttribute="top" id="G41-Qc-zGm"/>
+                        <constraint firstItem="l13-PQ-Gr5" firstAttribute="leading" secondItem="7rp-0s-1aQ" secondAttribute="leading" id="Gfa-mk-mFi"/>
+                        <constraint firstAttribute="width" constant="260" id="MHh-cl-CrC"/>
+                        <constraint firstAttribute="trailing" secondItem="7mB-3S-4Xb" secondAttribute="trailing" id="Pzt-V2-GfL"/>
+                        <constraint firstItem="7mB-3S-4Xb" firstAttribute="leading" secondItem="7rp-0s-1aQ" secondAttribute="leading" id="hlL-cr-aFd"/>
+                        <constraint firstAttribute="bottom" secondItem="l13-PQ-Gr5" secondAttribute="bottom" constant="8" id="kb4-Um-t3h"/>
+                        <constraint firstItem="l13-PQ-Gr5" firstAttribute="top" secondItem="7rp-0s-1aQ" secondAttribute="top" constant="20" id="owI-VU-dP3"/>
+                        <constraint firstAttribute="height" constant="157" id="qF4-i4-CHo"/>
+                        <constraint firstAttribute="trailing" secondItem="l13-PQ-Gr5" secondAttribute="trailing" id="vcB-sb-F42"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7rp-0s-1aQ" firstAttribute="top" secondItem="Wv8-gg-Fo2" secondAttribute="top" id="e58-mG-H4c"/>
+                <constraint firstAttribute="trailing" secondItem="7rp-0s-1aQ" secondAttribute="trailing" id="rqY-eW-qGh"/>
+            </constraints>
+            <point key="canvasLocation" x="423" y="-104"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fw_gift_plane1" width="399" height="191"/>
+        <image name="fw_gift_plane1_wing" width="85" height="85"/>
+    </resources>
+</document>

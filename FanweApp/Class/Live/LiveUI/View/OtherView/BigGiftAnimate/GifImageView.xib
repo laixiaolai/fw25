@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GiftView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GifImageView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="361"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjc-2I-xjM">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="LiJ-fi-axs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-Vk-WiB" customClass="FLAnimatedImageView">
+                    <rect key="frame" x="0.0" y="21" width="600" height="340"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SRl-Vk-WiB" secondAttribute="bottom" id="9YL-wp-sVj"/>
+                <constraint firstAttribute="trailing" secondItem="qjc-2I-xjM" secondAttribute="trailing" id="DXL-ds-fnM"/>
+                <constraint firstItem="qjc-2I-xjM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IOr-JG-8qV"/>
+                <constraint firstItem="qjc-2I-xjM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MVM-Rw-RkU"/>
+                <constraint firstAttribute="trailing" secondItem="SRl-Vk-WiB" secondAttribute="trailing" id="ahX-dj-RV7"/>
+                <constraint firstItem="SRl-Vk-WiB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hpY-Yy-AG1"/>
+                <constraint firstItem="SRl-Vk-WiB" firstAttribute="top" secondItem="qjc-2I-xjM" secondAttribute="bottom" id="mDu-rU-Z1u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gifImage" destination="SRl-Vk-WiB" id="Ooi-9i-bOR"/>
+                <outlet property="labelHeight" destination="LiJ-fi-axs" id="siN-WN-twx"/>
+                <outlet property="nickLabel" destination="qjc-2I-xjM" id="iQa-52-TuN"/>
+            </connections>
+            <point key="canvasLocation" x="-393" y="59"/>
+        </view>
+    </objects>
+</document>

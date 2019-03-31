@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="KGk-i7-Jjw" customClass="STTableSystemMsgCell">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tig-6S-8Fd">
+                        <rect key="frame" x="8" y="8" width="423" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ElL-0h-FGF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyx-vm-3aL">
+                        <rect key="frame" x="16" y="37" width="407" height="66.5"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="st_im_systenMsg_headerImg" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-P8-w9Q">
+                                <rect key="frame" x="8" y="8" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="RHR-30-JXg"/>
+                                    <constraint firstAttribute="height" constant="30" id="r7Q-O2-GHq"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-hU-psA">
+                                <rect key="frame" x="8" y="40.5" width="391" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统提示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-CO-RIx">
+                                <rect key="frame" x="46" y="13" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WGv-5f-hFc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mji-CO-RIx" secondAttribute="trailing" constant="8" id="3CA-Qf-oR6"/>
+                            <constraint firstItem="k2R-P8-w9Q" firstAttribute="leading" secondItem="Kyx-vm-3aL" secondAttribute="leading" constant="8" id="5Dv-2K-hMI"/>
+                            <constraint firstItem="zlm-hU-psA" firstAttribute="leading" secondItem="Kyx-vm-3aL" secondAttribute="leading" constant="8" id="Dz6-ZY-p2O"/>
+                            <constraint firstItem="Mji-CO-RIx" firstAttribute="leading" secondItem="k2R-P8-w9Q" secondAttribute="trailing" constant="8" id="ODR-dI-oqS"/>
+                            <constraint firstItem="k2R-P8-w9Q" firstAttribute="top" secondItem="Kyx-vm-3aL" secondAttribute="top" constant="8" id="Zic-Zp-tmz"/>
+                            <constraint firstAttribute="trailing" secondItem="zlm-hU-psA" secondAttribute="trailing" constant="8" id="ccy-II-aGh"/>
+                            <constraint firstAttribute="bottom" secondItem="zlm-hU-psA" secondAttribute="bottom" constant="8" id="e7E-Fb-dV3"/>
+                            <constraint firstItem="Mji-CO-RIx" firstAttribute="centerY" secondItem="k2R-P8-w9Q" secondAttribute="centerY" id="kx8-4x-JyZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="Kyx-vm-3aL" firstAttribute="top" secondItem="tig-6S-8Fd" secondAttribute="bottom" constant="8" id="3j9-TW-zyE"/>
+                    <constraint firstAttribute="trailing" secondItem="tig-6S-8Fd" secondAttribute="trailing" constant="8" id="8Xh-0b-cOx"/>
+                    <constraint firstItem="tig-6S-8Fd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="KTL-Ps-fCL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Kyx-vm-3aL" secondAttribute="bottom" constant="8" id="MuT-2U-8t5"/>
+                    <constraint firstItem="Kyx-vm-3aL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="hEq-WA-vcU"/>
+                    <constraint firstItem="tig-6S-8Fd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hVS-1D-Hut"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Kyx-vm-3aL" secondAttribute="trailing" constant="8" id="sTc-nj-AcC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerImgView" destination="k2R-P8-w9Q" id="UaQ-iN-HPw"/>
+                <outlet property="msgContentLab" destination="zlm-hU-psA" id="nNL-oK-3Qd"/>
+                <outlet property="msgTitleLab" destination="Mji-CO-RIx" id="I7q-XU-HOJ"/>
+                <outlet property="showView" destination="Kyx-vm-3aL" id="lOh-ng-GRk"/>
+                <outlet property="timeLab" destination="tig-6S-8Fd" id="FLJ-Et-b26"/>
+            </connections>
+            <point key="canvasLocation" x="-6.5" y="12"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="st_im_systenMsg_headerImg" width="40" height="40"/>
+    </resources>
+</document>
